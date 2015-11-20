@@ -4,8 +4,13 @@
   "description": "Simple observer pattern for JS callbacks.",
   "main": "index.js",
   "scripts": {
+    "build": "babel-node ./src/observer.js --out-file ./build/observer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "babel-core": "^6.0.20"
+  }
 }
