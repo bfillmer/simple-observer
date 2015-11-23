@@ -2,15 +2,19 @@
   "name": "simple-observer",
   "version": "0.0.1",
   "description": "Simple observer pattern for JS callbacks.",
-  "main": "index.js",
   "scripts": {
-    "build": "babel-node ./src/observer.js --out-file ./build/observer.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "./node_modules/.bin/babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile"
   },
-  "author": "",
+  "bin": "lib/observer.js",
+  "author": "Bryan Fillmer",
   "license": "ISC",
   "devDependencies": {
-    "ava": "^0.3.0",
-    "babel-core": "^6.0.20"
+    "babel-cli": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bfillmer/simple-observer"
   }
 }
